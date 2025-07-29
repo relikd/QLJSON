@@ -1,0 +1,88 @@
+body {
+	background: #fff;
+	color: #444;
+}
+.bool, .null, .num {
+	color: red;
+}
+.callback {
+	color: purple;
+}
+.string {
+	color: green;
+}
+a {
+	color: #0065FF
+}
+a:hover {
+	color: #0052CC
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #222;
+		color: #eee;
+	}
+	.callback {
+		color: violet;
+	}
+	.string {
+		color: yellowgreen;
+	}
+	a {
+		color: #2684FF;
+	}
+	a:hover {
+		color: #4C9AFF;
+	}
+}
+
+body, pre {
+	font-family: monospace;
+	white-space: pre-wrap;
+	line-break: anywhere;
+}
+.prop {
+	font-weight: bold;
+}
+.bool, .null {
+	font-style: italic;
+}
+
+/* Error handling */
+h1 {
+	font-size: 1.2em;
+}
+.error {
+	border-radius: 8px;
+	border: 2px solid #900;
+	margin: 5px;
+	padding: .4em .8em;
+}
+
+/* Collapsible */
+.closed>span {
+	position: absolute;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+.folder>i:nth-child(1):before {
+	content: "↙️";
+}
+.folder>i:nth-child(3):before {
+	content: "↗️";
+}
+i {
+	font-style: unset;
+	cursor: pointer;
+	opacity: .25;
+	/* position: absolute;
+	left: 2px; */
+}
+.highlight {
+	background: #7777;
+}
+.closed {
+	background: orange;
+}
