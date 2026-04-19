@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		547755402F94E58600BC07CC /* WebViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477553E2F94E58600BC07CC /* WebViewer.swift */; };
+		547755412F94E58600BC07CC /* WebViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477553E2F94E58600BC07CC /* WebViewer.swift */; };
+		547755432F94E70700BC07CC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547755422F94E70500BC07CC /* Document.swift */; };
+		5477554D2F94F18200BC07CC /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 548078372E38DC7700C2D26A /* style.css */; };
+		5477554E2F94F18200BC07CC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 548078362E38DC7700C2D26A /* script.js */; };
+		547755502F94F18400BC07CC /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 548078372E38DC7700C2D26A /* style.css */; };
+		547755512F94F18400BC07CC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 548078362E38DC7700C2D26A /* script.js */; };
 		548076412E38D22300C2D26A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548076402E38D22300C2D26A /* Quartz.framework */; };
 		5480764E2E38D22300C2D26A /* QLJSON PreviewExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5480763E2E38D22300C2D26A /* QLJSON PreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		548078302E38DC7400C2D26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548078282E38DC7400C2D26A /* AppDelegate.swift */; };
-		5480783B2E38DC7700C2D26A /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 548078362E38DC7700C2D26A /* script.js */; };
-		5480783C2E38DC7700C2D26A /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 548078372E38DC7700C2D26A /* style.css */; };
 		5480783D2E38DC7700C2D26A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548078322E38DC7700C2D26A /* PreviewViewController.swift */; };
 		549F368A2E3A518700585F61 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549F36892E3A518700585F61 /* MainMenu.xib */; };
 		549F368C2E3A519E00585F61 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549F368B2E3A519E00585F61 /* PreviewViewController.xib */; };
@@ -44,14 +49,14 @@
 
 /* Begin PBXFileReference section */
 		5448B6DE2E396DB900FB70FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5477553E2F94E58600BC07CC /* WebViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewer.swift; sourceTree = "<group>"; };
+		547755422F94E70500BC07CC /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		5480762A2E38D1C200C2D26A /* QLJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5480763E2E38D22300C2D26A /* QLJSON PreviewExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QLJSON PreviewExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		548076402E38D22300C2D26A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		548078282E38DC7400C2D26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5480782C2E38DC7400C2D26A /* QLJSON.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLJSON.entitlements; sourceTree = "<group>"; };
 		548078312E38DC7700C2D26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		548078322E38DC7700C2D26A /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		548078352E38DC7700C2D26A /* QLPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLPreview.entitlements; sourceTree = "<group>"; };
 		548078362E38DC7700C2D26A /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		548078372E38DC7700C2D26A /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		549F36892E3A518700585F61 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
@@ -79,9 +84,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5477553F2F94E58600BC07CC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				548078362E38DC7700C2D26A /* script.js */,
+				548078372E38DC7700C2D26A /* style.css */,
+				5477553E2F94E58600BC07CC /* WebViewer.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		548076212E38D1C200C2D26A = {
 			isa = PBXGroup;
 			children = (
+				5477553F2F94E58600BC07CC /* Common */,
 				54B0BEC72E3A64DA006BDEC5 /* README.md */,
 				5480782D2E38DC7400C2D26A /* App */,
 				548078382E38DC7700C2D26A /* QLPreview */,
@@ -113,8 +129,8 @@
 				54B0BEC52E3A63FC006BDEC5 /* AppIcon.icns */,
 				5448B6DE2E396DB900FB70FD /* Info.plist */,
 				548078282E38DC7400C2D26A /* AppDelegate.swift */,
+				547755422F94E70500BC07CC /* Document.swift */,
 				549F36892E3A518700585F61 /* MainMenu.xib */,
-				5480782C2E38DC7400C2D26A /* QLJSON.entitlements */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -125,9 +141,6 @@
 				548078312E38DC7700C2D26A /* Info.plist */,
 				548078322E38DC7700C2D26A /* PreviewViewController.swift */,
 				549F368B2E3A519E00585F61 /* PreviewViewController.xib */,
-				548078352E38DC7700C2D26A /* QLPreview.entitlements */,
-				548078362E38DC7700C2D26A /* script.js */,
-				548078372E38DC7700C2D26A /* style.css */,
 			);
 			path = QLPreview;
 			sourceTree = "<group>";
@@ -183,7 +196,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					548076292E38D1C200C2D26A = {
 						CreatedOnToolsVersion = 16.4;
@@ -218,6 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547755502F94F18400BC07CC /* style.css in Resources */,
+				547755512F94F18400BC07CC /* script.js in Resources */,
 				549F368A2E3A518700585F61 /* MainMenu.xib in Resources */,
 				54B0BEC62E3A63FC006BDEC5 /* AppIcon.icns in Resources */,
 			);
@@ -227,9 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5477554D2F94F18200BC07CC /* style.css in Resources */,
+				5477554E2F94F18200BC07CC /* script.js in Resources */,
 				549F368C2E3A519E00585F61 /* PreviewViewController.xib in Resources */,
-				5480783B2E38DC7700C2D26A /* script.js in Resources */,
-				5480783C2E38DC7700C2D26A /* style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				548078302E38DC7400C2D26A /* AppDelegate.swift in Sources */,
+				547755402F94E58600BC07CC /* WebViewer.swift in Sources */,
+				547755432F94E70700BC07CC /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5480783D2E38DC7700C2D26A /* PreviewViewController.swift in Sources */,
+				547755412F94E58600BC07CC /* WebViewer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +315,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 220;
+				CURRENT_PROJECT_VERSION = 306;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = UY657LKNHJ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -324,6 +343,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -363,7 +383,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 220;
+				CURRENT_PROJECT_VERSION = 306;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UY657LKNHJ;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -383,6 +404,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -390,9 +412,11 @@
 		548076382E38D1C300C2D26A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = App/QLJSON.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QLJSON;
@@ -415,9 +439,11 @@
 		548076392E38D1C300C2D26A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = App/QLJSON.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QLJSON;
@@ -440,8 +466,10 @@
 		548076512E38D22300C2D26A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = QLPreview/QLPreview.entitlements;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QLPreview/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "QLJSON PreviewExtension";
@@ -462,8 +490,10 @@
 		548076522E38D22300C2D26A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = QLPreview/QLPreview.entitlements;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QLPreview/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "QLJSON PreviewExtension";
