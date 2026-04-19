@@ -25,7 +25,32 @@ class Document: NSDocument, NSWindowDelegate {
 	override nonisolated func read(from url: URL, ofType typeName: String) throws {
 		try MainActor.assumeIsolated {
 			try web.load(fromFile: url)
+			try watchForChanges(url)
 		}
+	}
+	
+	// MARK: - File change watcher
+	
+	deinit {
+		watcher?.cancel()
+	}
+	
+	var watcher: DispatchSourceFileSystemObject? = nil
+	
+	func watchForChanges(_ url: URL) throws {
+		let fh = try FileHandle(forReadingFrom: url)
+		watcher = DispatchSource.makeFileSystemObjectSource(fileDescriptor: fh.fileDescriptor, eventMask: .write)
+		watcher!.setCancelHandler {
+			try? fh.close()
+		}
+		watcher!.setEventHandler { [unowned self] in
+			do {
+				try self.web.load(fromFile: url)
+			} catch {
+				self.watcher?.cancel()
+			}
+		}
+		watcher!.resume()
 	}
 }
 
