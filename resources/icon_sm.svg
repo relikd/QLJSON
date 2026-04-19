@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+<g font-family="Courier New" font-weight="bold">
+<rect id="bg" fill="#16c3ff" height="1024" rx="200" width="1024"/>
+<text id="ext" font-size="262" x="190" y="890">
+  <tspan x="190" y="890">json</tspan>
+</text>
+<g id="lines">
+  <path d="m212 122h600v66h-600z"/>
+  <path d="m212 272h600v66h-600z"/>
+  <path d="m212 422h600v65.6h-600z"/>
+  <path d="m212 572h600v66h-600z"/>
+</g>
+<circle id="lens" cx="500" cy="355" fill="#fff" r="250"/>
+<text id="json" fill="#444" x="290" y="290" font-size="62" xml:space="preserve">
+  <tspan x="290" y="290">"login":</tspan>
+  <tspan x="290" y="355" fill="#377e21">   "relikd"</tspan>,
+  <tspan x="290" y="440">"id":</tspan>
+  <tspan x="290" y="505" fill="#f00">   1321720</tspan>
+</text>
+<path id="handle" fill="#0b5e7f" d="m791 733c-8 6-19 5-25-2l-125-169 45-40 152 146c7 7 7 18 0 25z"/>
+<circle id="loupe" stroke="#0b5e7f" cx="500" cy="355" fill="none" r="250" stroke-width="35"/>
+</g>
+</svg>
