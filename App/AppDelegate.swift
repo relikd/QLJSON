@@ -20,6 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	func menuNeedsUpdate(_ menu: NSMenu) {
 		switch menu.identifier {
 		case .init(rawValue: "open-in-app"):
+			if let url = UserDefaults.standard.url(forKey: "defaultApp") {
+				menu.items.first!.title = "Last Used (\(url.lastPathComponent.dropLast(4)))"
+			} else {
+				menu.items.first!.title = "Last Used"
+			}
 			if menu.items.count == 1 { // populate once
 				let me = Bundle.main.bundleURL
 				let apps = appURLs().filter { $0 != me }//.sorted { $0.lastPathComponent < $1.lastPathComponent }
