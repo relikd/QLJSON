@@ -52,5 +52,20 @@ class Document: NSDocument, NSWindowDelegate {
 		}
 		watcher!.resume()
 	}
+	
+	// MARK: - Main Menu
+	
+	@IBAction func openInEditor(_ sender: NSMenuItem) {
+		let appURL: URL
+		if let url = sender.representedObject as? URL {
+			UserDefaults.standard.set(url, forKey: "defaultApp")
+			appURL = url
+		} else if let url = UserDefaults.standard.url(forKey: "defaultApp") {
+			appURL = url
+		} else {
+			return
+		}
+		NSWorkspace.shared.open([fileURL!], withApplicationAt: appURL, configuration: NSWorkspace.OpenConfiguration())
+	}
 }
 
