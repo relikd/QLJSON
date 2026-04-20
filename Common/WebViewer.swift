@@ -16,6 +16,10 @@ class WebViewer: NSViewController {
 	// sure, we could use `WKWebView`, but that requires the `com.apple.security.network.client` entitlement
 	let web = WebView()
 	
+	override func loadView() {
+		self.view = NSView(frame: NSMakeRect(0, 0, 500, 500))
+	}
+	
 	override func viewDidLoad() {
 		self.web.frame = self.view.bounds
 		self.web.autoresizingMask = [.width, .height]
