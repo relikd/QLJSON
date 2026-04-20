@@ -57,7 +57,7 @@ class WebViewer: NSViewController {
  <style>\(try bundleFile(filename: "style", ext: "css"))</style>
  <script>\(try bundleFile(filename: "script", ext: "js"))</script>
 </head>
-<body onload="init(); scrollTo(0, \(scrollTo))">
+<body onload="init(\(scrollTo))">
  <script id="json" type="application/json">\(jsonFile)</script>
 </body>
 </html>

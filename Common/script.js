@@ -24,8 +24,13 @@ function html(s) {
 
 // formatter entry point
 
-function init() {
-	document.body.innerHTML = parse(document.getElementById('json').textContent);
+function init(pos) {
+	let raw = document.getElementById('json').textContent;
+	document.body.innerHTML = raw;
+	new Promise(r => setTimeout(r, 0)).then((x) => {
+		document.body.innerHTML = parse(raw);
+		scrollTo(0, pos);
+	});
 }
 
 function parse(raw) {
