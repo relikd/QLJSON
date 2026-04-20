@@ -19,7 +19,6 @@
 		548078302E38DC7400C2D26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548078282E38DC7400C2D26A /* AppDelegate.swift */; };
 		5480783D2E38DC7700C2D26A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548078322E38DC7700C2D26A /* PreviewViewController.swift */; };
 		549F368A2E3A518700585F61 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549F36892E3A518700585F61 /* MainMenu.xib */; };
-		549F368C2E3A519E00585F61 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549F368B2E3A519E00585F61 /* PreviewViewController.xib */; };
 		54B0BEC62E3A63FC006BDEC5 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 54B0BEC52E3A63FC006BDEC5 /* AppIcon.icns */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		548078362E38DC7700C2D26A /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		548078372E38DC7700C2D26A /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		549F36892E3A518700585F61 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		549F368B2E3A519E00585F61 /* PreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewViewController.xib; sourceTree = "<group>"; };
 		54B0BEC52E3A63FC006BDEC5 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		54B0BEC72E3A64DA006BDEC5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +140,6 @@
 			children = (
 				548078312E38DC7700C2D26A /* Info.plist */,
 				548078322E38DC7700C2D26A /* PreviewViewController.swift */,
-				549F368B2E3A519E00585F61 /* PreviewViewController.xib */,
 			);
 			path = QLPreview;
 			sourceTree = "<group>";
@@ -246,7 +243,6 @@
 			files = (
 				5477554D2F94F18200BC07CC /* style.css in Resources */,
 				5477554E2F94F18200BC07CC /* script.js in Resources */,
-				549F368C2E3A519E00585F61 /* PreviewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +313,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 604;
+				CURRENT_PROJECT_VERSION = 611;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = UY657LKNHJ;
@@ -385,7 +381,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 604;
+				CURRENT_PROJECT_VERSION = 611;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UY657LKNHJ;
