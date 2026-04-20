@@ -56,14 +56,19 @@ class Document: NSDocument, NSWindowDelegate {
 		watcher!.setCancelHandler {
 			try? fh.close()
 		}
+		var prevTs = Date().timeIntervalSince1970
 		watcher!.setEventHandler { [unowned self] in
-			do {
-				try self.web.load(fromFile: url)
-			} catch {
-				self.watcher?.cancel()
+			let newTs = Date().timeIntervalSince1970
+			if newTs - prevTs > 0.2 {
+				prevTs = newTs
+				do {
+					try self.web.load(fromFile: url)
+				} catch {
+					self.watcher?.cancel()
+				}
 			}
 		}
-		watcher!.resume()
+		watcher!.activate()
 	}
 	
 	// MARK: - Main Menu
