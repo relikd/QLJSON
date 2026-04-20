@@ -21,37 +21,50 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 		switch menu.identifier {
 		case .init(rawValue: "open-in-app"):
 			if let url = UserDefaults.standard.url(forKey: "defaultApp") {
-				menu.items.first!.title = "Last Used (\(url.lastPathComponent.dropLast(4)))"
+				menu.items.first!.title = "Last Used (\(url.nameWithoutExt))"
 			} else {
 				menu.items.first!.title = "Last Used"
 			}
-			if menu.items.count == 1 { // populate once
-				let me = Bundle.main.bundleURL
-				let apps = appURLs().filter { $0 != me }//.sorted { $0.lastPathComponent < $1.lastPathComponent }
-				for appUrl in apps {
-					let item = menu.addItem(withTitle: String(appUrl.lastPathComponent.dropLast(4)), action: #selector(Document.openInEditor), keyEquivalent: "")
-					item.representedObject = appUrl
-				}
+			guard menu.items.count == 2 else {
+				return // populate only once
 			}
-			break
+			let me = Bundle.main.bundleURL
+			let apps = appsCanOpen(".json").filter { $0 != me }.sortedByLastName()
+			for appUrl in apps {
+				let item = menu.addItem(withTitle: appUrl.nameWithoutExt, action: #selector(Document.openInEditor), keyEquivalent: "")
+				item.representedObject = appUrl
+			}
 		default: break
 		}
 	}
-	
-	/// Find all default applications for handling JSON files
-	func appURLs() -> [URL] {
-		if #available(macOS 12.0, *) {
-			return NSWorkspace.shared.urlsForApplications(toOpen: .json)
-		} else {
-			let tmp = URL(string: "a.json", relativeTo: FileManager.default.temporaryDirectory)!
-			FileManager.default.createFile(atPath: tmp.path, contents: nil)
-			defer {
-				try? FileManager.default.removeItem(at: tmp)
-			}
-			if let x = LSCopyApplicationURLsForURL(tmp as CFURL, .all) {
-				return x.takeRetainedValue() as? [URL] ?? []
-			}
-			return []
-		}
+}
+
+
+// MARK: Helper
+
+extension Array where Element == URL {
+	/// Case-insensitive compare of `lastPathComponent`.
+	func sortedByLastName() -> [Element] {
+		sorted { $0.lastPathComponent.localizedLowercase < $1.lastPathComponent.localizedLowercase }
 	}
+}
+
+extension URL {
+	/// `deletingPathExtension().lastPathComponent`
+	var nameWithoutExt: String { deletingPathExtension().lastPathComponent }
+}
+
+/// Find all default applications for handling filetype.
+func appsCanOpen(_ ext: String) -> [URL] {
+	let tmp = URL(string: "a." + ext, relativeTo: FileManager.default.temporaryDirectory)!
+	FileManager.default.createFile(atPath: tmp.path, contents: nil)
+	defer {
+		try? FileManager.default.removeItem(at: tmp)
+	}
+	if #available(macOS 12.0, *) {
+		return NSWorkspace.shared.urlsForApplications(toOpen: tmp)
+	} else if let x = LSCopyApplicationURLsForURL(tmp as CFURL, .all) {
+		return x.takeRetainedValue() as? [URL] ?? []
+	}
+	return []
 }

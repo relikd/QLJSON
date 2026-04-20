@@ -78,6 +78,7 @@
                                                 </binding>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="zve-6x-ybw"/>
                                     </items>
                                     <connections>
                                         <outlet property="delegate" destination="Voe-Tx-rLC" id="9h8-BS-5bm"/>
