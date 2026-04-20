@@ -17,7 +17,7 @@ class WebViewer: NSViewController {
 	let web = WebView()
 	
 	override func loadView() {
-		self.view = NSView(frame: NSMakeRect(0, 0, 500, 500))
+		self.view = NSView(frame: NSMakeRect(0, 0, 800, 600))
 	}
 	
 	override func viewDidLoad() {
