@@ -33,6 +33,20 @@ class WebViewer: NSViewController {
 	}
 	
 	func load(fromFile: URL) throws {
+		let size = try FileManager.default.attributesOfItem(atPath: fromFile.path)[.size] as! NSNumber
+		guard size.uint64Value < 1_000_000 else {
+			self.load(html: """
+<!DOCTYPE html>
+<html>
+<head>
+ <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+ <style>\(try bundleFile(filename: "style", ext: "css"))</style>
+</head>
+<body><p class="error">File too large</p></body>
+</html>
+""")
+			return
+		}
 		let scrollTo = web.mainFrame.domDocument.documentElement.scrollTop
 		let jsonFile = try String(contentsOf: fromFile, encoding: .utf8)
 		self.load(html: """
