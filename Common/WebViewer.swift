@@ -33,6 +33,7 @@ class WebViewer: NSViewController {
 	}
 	
 	func load(fromFile: URL) throws {
+		let scrollTo = web.mainFrame.domDocument.documentElement.scrollTop
 		let jsonFile = try String(contentsOf: fromFile, encoding: .utf8)
 		self.load(html: """
 <!DOCTYPE html>
@@ -42,7 +43,7 @@ class WebViewer: NSViewController {
  <style>\(try bundleFile(filename: "style", ext: "css"))</style>
  <script>\(try bundleFile(filename: "script", ext: "js"))</script>
 </head>
-<body onload="init()">
+<body onload="init(); scrollTo(0, \(scrollTo))">
  <script id="json" type="application/json">\(jsonFile)</script>
 </body>
 </html>

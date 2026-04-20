@@ -52,7 +52,7 @@ class Document: NSDocument, NSWindowDelegate {
 	
 	func watchForChanges(_ url: URL) throws {
 		let fh = try FileHandle(forReadingFrom: url)
-		watcher = DispatchSource.makeFileSystemObjectSource(fileDescriptor: fh.fileDescriptor, eventMask: .write)
+		watcher = DispatchSource.makeFileSystemObjectSource(fileDescriptor: fh.fileDescriptor, eventMask: .write, queue: .main)
 		watcher!.setCancelHandler {
 			try? fh.close()
 		}
