@@ -180,9 +180,9 @@
 			productReference = 5480762A2E38D1C200C2D26A /* QLJSON (debug).app */;
 			productType = "com.apple.product-type.application";
 		};
-		5480763D2E38D22300C2D26A /* QL Preview */ = {
+		5480763D2E38D22300C2D26A /* Preview */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 548076502E38D22300C2D26A /* Build configuration list for PBXNativeTarget "QL Preview" */;
+			buildConfigurationList = 548076502E38D22300C2D26A /* Build configuration list for PBXNativeTarget "Preview" */;
 			buildPhases = (
 				5480763A2E38D22300C2D26A /* Sources */,
 				5480763B2E38D22300C2D26A /* Frameworks */,
@@ -192,7 +192,7 @@
 			);
 			dependencies = (
 			);
-			name = "QL Preview";
+			name = Preview;
 			packageProductDependencies = (
 			);
 			productName = QLPreview;
@@ -232,7 +232,7 @@
 			projectRoot = "";
 			targets = (
 				548076292E38D1C200C2D26A /* App */,
-				5480763D2E38D22300C2D26A /* QL Preview */,
+				5480763D2E38D22300C2D26A /* Preview */,
 			);
 		};
 /* End PBXProject section */
@@ -285,7 +285,7 @@
 /* Begin PBXTargetDependency section */
 		5480764D2E38D22300C2D26A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5480763D2E38D22300C2D26A /* QL Preview */;
+			target = 5480763D2E38D22300C2D26A /* Preview */;
 			targetProxy = 5480764C2E38D22300C2D26A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -529,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		548076502E38D22300C2D26A /* Build configuration list for PBXNativeTarget "QL Preview" */ = {
+		548076502E38D22300C2D26A /* Build configuration list for PBXNativeTarget "Preview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				548076512E38D22300C2D26A /* Debug */,

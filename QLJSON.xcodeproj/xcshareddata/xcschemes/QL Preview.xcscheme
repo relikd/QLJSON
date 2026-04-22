@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5480763D2E38D22300C2D26A"
-               BuildableName = "QLJSON PreviewExtension.appex"
-               BlueprintName = "QL Preview"
+               BuildableName = "QLJSON Preview Extension.appex"
+               BlueprintName = "Preview"
                ReferencedContainer = "container:QLJSON.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
