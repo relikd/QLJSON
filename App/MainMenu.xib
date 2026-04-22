@@ -83,6 +83,11 @@
                                 </menu>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="p9r-NM-Aq2"/>
+                            <menuItem title="Reload Document" keyEquivalent="r" id="dAy-Ff-5Lp">
+                                <connections>
+                                    <action selector="reloadDocument:" target="-1" id="6Uk-If-ZYC"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Open in App" id="5bC-ul-6bH">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Open in App" identifier="open-in-app" id="zXQ-nf-fxC">

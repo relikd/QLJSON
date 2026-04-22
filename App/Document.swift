@@ -57,6 +57,12 @@ class Document: NSDocument, NSWindowDelegate {
 		NSWorkspace.shared.open([fileURL!], withApplicationAt: appURL, configuration: NSWorkspace.OpenConfiguration())
 	}
 	
+	@IBAction func reloadDocument(_ sender: NSMenuItem) {
+		if let url = self.fileURL ?? web.url {
+			try? _reload(url)
+		}
+	}
+	
 	
 	// MARK: - File change watcher
 	
