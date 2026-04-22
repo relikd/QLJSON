@@ -5,6 +5,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project does adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.2.0] - 2026-04-22
+Added:
+- Drag-n-drop onto document window to open files (App)
+- Reload document (⌘R)
+
+Fixed:
+- Auto-reload if changed in VIM
+
+Changed:
+- Reference style & js by local file URL instead of raw content
+- Minor changes to menu items (order & separator)
+
+
 ## [1.1.0] - 2026-04-20
 Added:
 - Open json files with the companion app
@@ -19,5 +32,6 @@ Changed:
 Initial release
 
 
+[1.2.0]: https://github.com/relikd/QLJSON/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/relikd/QLJSON/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/relikd/QLJSON/tree/v1.0.0

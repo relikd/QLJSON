@@ -15,7 +15,7 @@
 		547755502F94F18400BC07CC /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 548078372E38DC7700C2D26A /* style.css */; };
 		547755512F94F18400BC07CC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 548078362E38DC7700C2D26A /* script.js */; };
 		548076412E38D22300C2D26A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548076402E38D22300C2D26A /* Quartz.framework */; };
-		5480764E2E38D22300C2D26A /* QLJSON PreviewExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5480763E2E38D22300C2D26A /* QLJSON PreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5480764E2E38D22300C2D26A /* QLJSON Preview Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5480763E2E38D22300C2D26A /* QLJSON Preview Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		548078302E38DC7400C2D26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548078282E38DC7400C2D26A /* AppDelegate.swift */; };
 		5480783D2E38DC7700C2D26A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548078322E38DC7700C2D26A /* PreviewViewController.swift */; };
 		549F368A2E3A518700585F61 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549F36892E3A518700585F61 /* MainMenu.xib */; };
@@ -39,7 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5480764E2E38D22300C2D26A /* QLJSON PreviewExtension.appex in Embed Foundation Extensions */,
+				5480764E2E38D22300C2D26A /* QLJSON Preview Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,11 +48,13 @@
 
 /* Begin PBXFileReference section */
 		5448B6DE2E396DB900FB70FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		546D44BF2F99406200B85121 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		546D44C02F99406200B85121 /* Config-debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-debug.xcconfig"; sourceTree = "<group>"; };
 		5477553E2F94E58600BC07CC /* WebViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewer.swift; sourceTree = "<group>"; };
 		547755422F94E70500BC07CC /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		5477559D2F95653C00BC07CC /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		5480762A2E38D1C200C2D26A /* QLJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5480763E2E38D22300C2D26A /* QLJSON PreviewExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QLJSON PreviewExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5480762A2E38D1C200C2D26A /* QLJSON (debug).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QLJSON (debug).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5480763E2E38D22300C2D26A /* QLJSON Preview Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QLJSON Preview Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		548076402E38D22300C2D26A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		548078282E38DC7400C2D26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		548078312E38DC7700C2D26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 		548076212E38D1C200C2D26A = {
 			isa = PBXGroup;
 			children = (
+				546D44BF2F99406200B85121 /* Config.xcconfig */,
+				546D44C02F99406200B85121 /* Config-debug.xcconfig */,
 				5477559D2F95653C00BC07CC /* CHANGELOG.md */,
 				54B0BEC72E3A64DA006BDEC5 /* README.md */,
 				5477553F2F94E58600BC07CC /* Common */,
@@ -109,8 +113,8 @@
 		5480762B2E38D1C200C2D26A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5480762A2E38D1C200C2D26A /* QLJSON.app */,
-				5480763E2E38D22300C2D26A /* QLJSON PreviewExtension.appex */,
+				5480762A2E38D1C200C2D26A /* QLJSON (debug).app */,
+				5480763E2E38D22300C2D26A /* QLJSON Preview Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,7 +169,7 @@
 			packageProductDependencies = (
 			);
 			productName = QLJSON;
-			productReference = 5480762A2E38D1C200C2D26A /* QLJSON.app */;
+			productReference = 5480762A2E38D1C200C2D26A /* QLJSON (debug).app */;
 			productType = "com.apple.product-type.application";
 		};
 		5480763D2E38D22300C2D26A /* QL Preview */ = {
@@ -184,7 +188,7 @@
 			packageProductDependencies = (
 			);
 			productName = QLPreview;
-			productReference = 5480763E2E38D22300C2D26A /* QLJSON PreviewExtension.appex */;
+			productReference = 5480763E2E38D22300C2D26A /* QLJSON Preview Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -281,6 +285,7 @@
 /* Begin XCBuildConfiguration section */
 		548076352E38D1C300C2D26A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546D44C02F99406200B85121 /* Config-debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -312,9 +317,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 611;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = UY657LKNHJ;
@@ -336,8 +339,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,6 +351,7 @@
 		};
 		548076362E38D1C300C2D26A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546D44BF2F99406200B85121 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -381,9 +383,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 611;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UY657LKNHJ;
@@ -399,8 +399,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -412,14 +410,12 @@
 		548076382E38D1C300C2D26A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QLJSON;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -428,24 +424,22 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.relikd.QLJSON;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(inherited) (debug)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		548076392E38D1C300C2D26A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QLJSON;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -454,58 +448,55 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.relikd.QLJSON;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		548076512E38D22300C2D26A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QLPreview/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "QLJSON PreviewExtension";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME) (debug)";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.relikd.QLJSON.Preview;
-				PRODUCT_NAME = "$(PROJECT_NAME) PreviewExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).Preview";
+				PRODUCT_NAME = "$(inherited) Preview Extension";
 				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		548076522E38D22300C2D26A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QLPreview/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "QLJSON PreviewExtension";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.relikd.QLJSON.Preview;
-				PRODUCT_NAME = "$(PROJECT_NAME) PreviewExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).Preview";
+				PRODUCT_NAME = "$(inherited) Preview Extension";
 				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
