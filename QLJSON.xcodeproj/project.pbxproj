@@ -85,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		546D44CF2F994BC500B85121 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				54B0BEC52E3A63FC006BDEC5 /* AppIcon.icns */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		5477553F2F94E58600BC07CC /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +113,7 @@
 				5477553F2F94E58600BC07CC /* Common */,
 				5480782D2E38DC7400C2D26A /* App */,
 				548078382E38DC7700C2D26A /* QLPreview */,
+				546D44CF2F994BC500B85121 /* resources */,
 				5480763F2E38D22300C2D26A /* Frameworks */,
 				5480762B2E38D1C200C2D26A /* Products */,
 			);
@@ -130,7 +139,6 @@
 		5480782D2E38DC7400C2D26A /* App */ = {
 			isa = PBXGroup;
 			children = (
-				54B0BEC52E3A63FC006BDEC5 /* AppIcon.icns */,
 				5448B6DE2E396DB900FB70FD /* Info.plist */,
 				547755422F94E70500BC07CC /* Document.swift */,
 				548078282E38DC7400C2D26A /* AppDelegate.swift */,
