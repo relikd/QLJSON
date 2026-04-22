@@ -12,6 +12,7 @@ class Document: NSDocument, NSWindowDelegate {
 		restoreWindowSize(window)
 		window.makeKeyAndOrderFront(nil)
 		window.delegate = self
+		DragDropToOpenOverlay.onView(web.view)
 	}
 	
 	func windowDidResize(_ notification: Notification) {
@@ -129,5 +130,29 @@ class FileWatcher {
 				self.closure()
 			}
 		}
+	}
+}
+
+
+// MARK: - Drag-drop open files
+
+class DragDropToOpenOverlay: NSView {
+	static func onView(_ view: NSView) {
+		let v = DragDropToOpenOverlay(frame: view.bounds)
+		v.autoresizingMask = [.width, .height]
+		v.registerForDraggedTypes([.fileURL])
+		view.addSubview(v)
+	}
+	
+	override func draggingEntered(_ sender: any NSDraggingInfo) -> NSDragOperation {
+		return .generic
+	}
+	
+	override func performDragOperation(_ sender: any NSDraggingInfo) -> Bool {
+		if let files = sender.draggingPasteboard.readObjects(forClasses: [NSURL.self]) as? [URL] {
+			NSWorkspace.shared.open(files, withApplicationAt: Bundle.main.bundleURL, configuration: NSWorkspace.OpenConfiguration())
+			return true
+		}
+		return false
 	}
 }
