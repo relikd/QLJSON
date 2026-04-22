@@ -55,8 +55,8 @@ class WebViewer: NSViewController {
 <html>
 <head>
  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
- <style>\(bundleFile(filename: "style", ext: "css"))</style>
- <script>\(bundleFile(filename: "script", ext: "js"))</script>
+ <link rel="stylesheet" type="text/css" href="\(bundleFile(filename: "style", ext: "css"))" />
+ <script src="\(bundleFile(filename: "script", ext: "js"))"></script>
 </head>
 \(body)
 </html>
