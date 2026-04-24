@@ -2,10 +2,10 @@
 <def>
 <style>.url{fill:#0065ff} .num{fill:#f00} .str{fill:#377e21}</style>
 </def>
-<g font-family="Courier New" font-weight="bold" transform="translate(100,100) scale(0.8)">
+<g font-family="Courier New" font-weight="bold" transform="translate(96,96) scale(0.8125)">
 <rect id="bg" fill="#16c3ff" height="1024" rx="200" width="1024"/>
-<text id="ext" font-size="200" x="205.39" y="904.94">
-<tspan x="205.39" y="904.94">json</tspan>
+<text id="ext" font-size="200" x="205" y="905">
+<tspan x="205" y="905">json</tspan>
 </text>
 <g id="lines">
   <path d="m212 122h600v16h-600z"/>
@@ -21,7 +21,7 @@
   <path d="m212 622h600v16h-600z"/>
   <path d="m212 672h600v16h-600z"/>
 </g>
-<circle id="lens" cx="486.8" cy="462.2" fill="#fff" r="289.4"/>
+<circle id="lens" cx="490" cy="460" fill="#fff" r="290"/>
 <text id="json" fill="#444" x="235" y="240" font-size="36" xml:space="preserve">
   <tspan x="235" y="240">    md_url": "<tspan class="url">https</tspan></tspan>
   <tspan x="235" y="290">  ml_url": "<tspan class="url">https://gi</tspan></tspan>
@@ -35,7 +35,7 @@
   <tspan x="235" y="690"> "url": "<tspan class="url">https://api</tspan>
   </tspan>
 </text>
-<path id="handle" fill="#0b5e7f" d="m826 902c-9 8-22 6-29-3l-148-199 53-47 179 172c8 8 8 22-1 29z"/>
+<path id="handle" fill="#0b5e7f" d="m830 900c-9 8-22 6-29-3l-148-199 53-47 179 172c8 8 8 22-1 29z"/>
 <circle id="loupe" stroke="#0b5e7f" cx="490" cy="460" fill="none" r="290" stroke-width="40"/>
 </g>
 </svg>
