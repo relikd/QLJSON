@@ -8,6 +8,7 @@ and this project does adhere to [Semantic Versioning](https://semver.org/spec/v2
 ## [1.2.1] - 2026-09-18
 Fixed:
 - Crash on file edit after preview window closed (file-watcher is now properly deallocated)
+- Pixel-perfect border for app icon
 
 
 ## [1.2.0] - 2026-04-22
